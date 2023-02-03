@@ -1,0 +1,20 @@
+[
+    {
+        "grvNum":"",
+        "orderNum":"",
+        "productName":"",
+        "productID":"",
+        "categoryName":"",
+        "vendorName":"",
+        "vendorID":"",
+        "qtyIn":"",
+        "productUnit":"",
+        "productPrice":"",
+        "productValue":"",
+        "invoiceDate":"",
+        "invoiceNum":"",
+        "supplyDate":"",
+        "remark":"",
+        "transDate":""       
+    }
+]

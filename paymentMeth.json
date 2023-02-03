@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "method":"Cash"
+    },
+    {
+        "id":"2",
+        "method":"POS"
+    },
+    {
+        "id":"3",
+        "method":"Transfer"
+    },
+    {
+        "id":"4",
+        "method":"Complimentary"
+    },
+    {
+        "id":"4",
+        "method":"Credit"
+    }
+    
+]

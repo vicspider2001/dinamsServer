@@ -1,0 +1,26 @@
+[
+    {
+        "orgID":1,
+        "class":"Corporate",
+        "orgName":"MTN Nigeria",
+        "orgAddress":"Abuja",
+        "orgPhone":"08035905421",
+        "orgEmail":"adrielanogwih@gmail.com"
+    },
+    {
+        "orgID":2,
+        "class":"Corporate",
+        "orgName":"AIRTEL Nigeria",
+        "orgAddress":"Abuja",
+        "orgPhone":"08035905421",
+        "orgEmail":"adrielanogwih@gmail.com"
+    },
+    {
+        "orgID":3,
+        "class":"Corporate",
+        "orgName":"GLO Nigeria",
+        "orgAddress":"Lagos",
+        "orgPhone":"08035905421",
+        "orgEmail":"adrielanogwih@gmail.com"
+    }
+]

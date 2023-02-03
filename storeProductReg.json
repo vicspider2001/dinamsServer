@@ -1,0 +1,19 @@
+[
+    {
+        "_id": "1537",
+        "categoryName": "Frozen Store",
+        "productID": "900001",
+        "productName": "Frozen Beef",
+        "productPrice": "50000",
+        "productUnit": "Kg",
+        "productType":"Beer",
+        "productTypeID":"1",
+        "binNum": "23456",
+        "reOrderLevel": "35",
+        "entryDate": "Fri Jul 08 2022 00:00:00 GMT+0100 (West Africa Standard Time)"
+
+        
+
+    }
+    
+]

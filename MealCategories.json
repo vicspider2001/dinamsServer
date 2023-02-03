@@ -1,0 +1,45 @@
+[
+    {
+        "mealTypeID":1,
+        "mealType":"Breakfast"
+    },
+    
+    {
+        "mealTypeID":2,
+        "mealType":"swallow"
+        
+    },
+    
+    {
+       
+        "mealTypeID":3,
+        "mealType":"soup"
+       
+    },
+    
+    {
+        "mealTypeID":4,
+        "mealType":"protein"
+        
+    },
+    
+
+    {
+        "mealTypeID":5,
+        "mealType":"salad"
+    },
+
+   
+    {
+        "mealTypeID":6,
+        "mealType":"breakfast"
+        
+    },
+    {
+        "mealTypeID":7,
+        "mealType":"Soft Drinks"
+        
+    }
+    
+
+]

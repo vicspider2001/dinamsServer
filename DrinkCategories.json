@@ -1,0 +1,56 @@
+[
+    {
+        "mealTypeID":1,
+        "mealType":"Cream"
+    },
+    
+    {
+        "mealTypeID":2,
+        "mealType":"Energy Drinks"
+        
+    },
+    
+    {
+       
+        "mealTypeID":3,
+        "mealType":"Beer"
+       
+    },
+    
+    {
+        "mealTypeID":4,
+        "mealType":"Apparetive"
+        
+    },
+    
+
+    {
+        "mealTypeID":5,
+        "mealType":"Champagne"
+    },
+
+   
+    {
+        "mealTypeID":6,
+        "mealType":"Wine"
+        
+    },
+    {
+        "mealTypeID":7,
+        "mealType":"Spirit"
+        
+    },
+    {
+        "mealTypeID":8,
+        "mealType":"Juice"
+        
+    },
+
+    {
+        "mealTypeID":9,
+        "mealType":"Cognac"
+        
+    }
+    
+
+]

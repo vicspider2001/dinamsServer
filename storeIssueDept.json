@@ -1,0 +1,66 @@
+[
+    {
+        "departmentID":"20001",
+        "departmentName":"Kitchen"
+     
+    },
+
+    {
+        "departmentID":"20002",
+        "departmentName":"Bar"
+     
+    },
+
+       
+    {
+        "departmentID":"20005",
+        "departmentName":"Housekeeping"
+     
+    },
+
+    {
+        "departmentID":"20006",
+        "departmentName":"Reception"
+     
+    },
+
+    {
+        "departmentID":"20007",
+        "departmentName":"Accounts Office"
+     
+    },
+
+    {
+        "departmentID":"20008",
+        "departmentName":"Manager's Office"
+     
+    },
+
+    {
+        "departmentID":"20009",
+        "departmentName":"Central Store"
+     
+    },
+
+    {
+        "departmentID":"20010",
+        "departmentName":"Club"
+     
+    },
+
+    {
+        "departmentID":"20011",
+        "departmentName":"Maintenance Office"
+     
+    },
+
+    {
+        "departmentID":"20012",
+        "departmentName":"PoolBar"
+     
+    }
+
+
+
+
+]
