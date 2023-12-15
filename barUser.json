@@ -1,13 +1,27 @@
-[
-    {
-        "name": "Kola S",
-        "username": "kola",
-        "password": "kola"
-    },
-    {
-        "name": "Victor A",
-        "username": "victor",
-        "password": "1977"
-    }
-
-]
+[{
+  "_id": {
+    "$oid": "63da9b317ed21bca47411d0d"
+  },
+  "name": "Victor A",
+  "username": "victor",
+  "password": "1977"
+},
+{
+  "_id": {
+    "$oid": "64f1dc7ff13187f2242d7cea"
+  },
+  "refID": "33179",
+  "name": "KOLA",
+  "username": "KOLA",
+  "password": "1005",
+  "department": "Bar"
+},{
+  "_id": {
+    "$oid": "65153dfa1485c765e116aff7"
+  },
+  "refID": "37736",
+  "name": "Favour Stephen",
+  "username": "Favour",
+  "password": "Peace",
+  "department": "Bar"
+}]

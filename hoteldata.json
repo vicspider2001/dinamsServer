@@ -1,401 +1,451 @@
-[
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "105",
-        "roomRate":"15000",
-        "floorNumber":"1"
-        
-      
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "106",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "107",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "202",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "207",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "209",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "211",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "220",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "302",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "309",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "311",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "313",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "320",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "501",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-    
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "502",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "503",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 1,
-        "roomtypeName": "Executive Standard",
-        "roomNumbers": "504",
-        "roomRate":"15000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "101",
-        "roomRate":"20000",
-        "floorNumber":"2"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "102",
-        "roomRate":"20000",
-        "floorNumber":"2"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "104",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "201",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "203",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "204",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "205",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "206",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "210",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "212",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "214",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "216",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "218",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "301",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "303",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "304",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "305",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "306",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "310",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "314",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "316",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 2,
-        "roomtypeName": "Executive King",
-        "roomNumbers": "318",
-        "roomRate":"20000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 3,
-        "roomtypeName": "Executive Suite",
-        "roomNumbers": "208",
-        "roomRate":"35000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 3,
-        "roomtypeName": "Executive Suite",
-        "roomNumbers": "308",
-        "roomRate":"35000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 3,
-        "roomtypeName": "Executive Suite",
-        "roomNumbers": "312",
-        "roomRate":"35000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 4,
-        "roomtypeName": "Superior Deluxe",
-        "roomNumbers": "307",
-        "roomRate":"40000",
-        "floorNumber":"1"
-             
-    },
-
-    {
-        "roomtypeID": 5,
-        "roomtypeName": "Presidential Suite",
-        "roomNumbers": "401",
-        "roomRate":"60000",
-        "floorNumber":"1"
-             
-    }
-
-    
-]
+[{
+  "_id": {
+    "$oid": "64f9a7ca5aaaf41487cddb8f"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "101",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a7dc5aaaf41487cddb90"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "102",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a81a5aaaf41487cddb91"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "103",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a8355aaaf41487cddb92"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "104",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a89e5aaaf41487cddb93"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "201",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a8b05aaaf41487cddb94"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "202",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a8c55aaaf41487cddb95"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "203",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a8d75aaaf41487cddb96"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "204",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a9145aaaf41487cddb97"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "205",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a9335aaaf41487cddb98"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "206",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a9425aaaf41487cddb99"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "207",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a9565aaaf41487cddb9a"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "208",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9a9945aaaf41487cddb9b"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "301",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9a9ab5aaaf41487cddb9c"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "302",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9a9e75aaaf41487cddb9d"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "303",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9aa0e5aaaf41487cddb9e"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "304",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9aa2d5aaaf41487cddb9f"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "305",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9aa6d5aaaf41487cddba0"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "306",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9aad75aaaf41487cddba1"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "307",
+  "roomRate": "30000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ab045aaaf41487cddba2"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "308",
+  "roomRate": "30000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9ab185aaaf41487cddba3"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "401",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ab2f5aaaf41487cddba4"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "402",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ab4a5aaaf41487cddba5"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "403",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ab5f5aaaf41487cddba6"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "404",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ab795aaaf41487cddba7"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "405",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ab905aaaf41487cddba8"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "406",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9abc45aaaf41487cddba9"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "407",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9abdc5aaaf41487cddbaa"
+  },
+  "roomtypeID": 1,
+  "roomtypeName": "Classic Room",
+  "roomNumbers": "408",
+  "roomRate": "30000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9ac0d5aaaf41487cddbab"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "210",
+  "roomRate": "35000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9ac355aaaf41487cddbac"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "211",
+  "roomRate": "35000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9ac675aaaf41487cddbad"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "212",
+  "roomRate": "35000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9ac805aaaf41487cddbae"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "214",
+  "roomRate": "35000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9aca45aaaf41487cddbaf"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "310",
+  "roomRate": "35000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ad165aaaf41487cddbb0"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "311",
+  "roomRate": "35000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ad2d5aaaf41487cddbb1"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "312",
+  "roomRate": "35000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ad415aaaf41487cddbb2"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "314",
+  "roomRate": "35000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ad535aaaf41487cddbb3"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "314",
+  "roomRate": "35000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9ae3b5aaaf41487cddbb5"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "410",
+  "roomRate": "35000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9af1a5aaaf41487cddbb6"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "411",
+  "roomRate": "35000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9af345aaaf41487cddbb7"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "412",
+  "roomRate": "35000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9af4b5aaaf41487cddbb8"
+  },
+  "roomtypeID": 2,
+  "roomtypeName": "Deluxe",
+  "roomNumbers": "414",
+  "roomRate": "35000",
+  "floorNumber": "3"
+},{
+  "_id": {
+    "$oid": "64f9af6f5aaaf41487cddbb9"
+  },
+  "roomtypeID": 3,
+  "roomtypeName": "Superior",
+  "roomNumbers": "209",
+  "roomRate": "40000",
+  "floorNumber": "1"
+},{
+  "_id": {
+    "$oid": "64f9af8a5aaaf41487cddbba"
+  },
+  "roomtypeID": 3,
+  "roomtypeName": "Superior",
+  "roomNumbers": "309",
+  "roomRate": "40000",
+  "floorNumber": "2"
+},{
+  "_id": {
+    "$oid": "64f9afa75aaaf41487cddbbb"
+  },
+  "roomtypeID": 3,
+  "roomtypeName": "Superior",
+  "roomNumbers": "409",
+  "roomRate": "40000",
+  "floorNumber": "1"
+},{
+  "_id":{
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 4,
+"roomtypeName": "Diplomatic Suite",
+"roomNumbers": "215",
+"roomRate": "70000",
+"floorNumber": "1"
+},{
+  "_id": {
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 4,
+"roomtypeName": "Diplomatic Suite",
+"roomNumbers": "315",
+"roomRate": "70000",
+"floorNumber": "2"
+},{
+  "_id": {
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 4,
+"roomtypeName": "Diplomatic Suite",
+"roomNumbers": "415",
+"roomRate": "70000",
+"floorNumber": "3"
+},{
+  "_id": {
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 5,
+"roomtypeName": "Executive Suite",
+"roomNumbers": "213",
+"roomRate": "60000",
+"floorNumber": "1"
+},{
+  "_id": {
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 5,
+"roomtypeName": "Executive Suite",
+"roomNumbers": "313",
+"roomRate": "60000",
+"floorNumber": "2"
+},{
+  "_id": {
+  "$oid": "64f9afa75aaaf41487cddbbb"
+ },
+"roomtypeID": 5,
+"roomtypeName": "Superior",
+"roomNumbers": "413",
+"roomRate": "60000",
+"floorNumber": "3"
+}]

@@ -1,45 +1,103 @@
-[
-    {
-        "mealTypeID":1,
-        "mealType":"Breakfast"
-    },
-    
-    {
-        "mealTypeID":2,
-        "mealType":"swallow"
-        
-    },
-    
-    {
-       
-        "mealTypeID":3,
-        "mealType":"soup"
-       
-    },
-    
-    {
-        "mealTypeID":4,
-        "mealType":"protein"
-        
-    },
-    
-
-    {
-        "mealTypeID":5,
-        "mealType":"salad"
-    },
-
-   
-    {
-        "mealTypeID":6,
-        "mealType":"breakfast"
-        
-    },
-    {
-        "mealTypeID":7,
-        "mealType":"Soft Drinks"
-        
-    }
-    
-
-]
+[{
+  "_id": {
+    "$oid": "64f867f7f780dcb307682f78"
+  },
+  "mealTypeID": 1,
+  "mealType": " Continental Breakfast"
+},{
+  "_id": {
+    "$oid": "64f86861e8433bd01c7522d9"
+  },
+  "mealTypeID": 4,
+  "mealType": "English Breakfast"
+},{
+  "_id": {
+    "$oid": "64f868b6e8433bd01c7522db"
+  },
+  "mealTypeID": 6,
+  "mealType": "Full English Breakfast"
+},{
+  "_id": {
+    "$oid": "64f868d0e8433bd01c7522dc"
+  },
+  "mealTypeID": 7,
+  "mealType": "Nigeria Breakfast"
+},{
+  "_id": {
+    "$oid": "64f868ece8433bd01c7522dd"
+  },
+  "mealTypeID": 8,
+  "mealType": "Cold Starter"
+},{
+  "_id": {
+    "$oid": "64f868fce8433bd01c7522de"
+  },
+  "mealTypeID": 9,
+  "mealType": "Hot Starter"
+},{
+  "_id": {
+    "$oid": "64f86915e8433bd01c7522df"
+  },
+  "mealTypeID": 10,
+  "mealType": "Easy Chops"
+},{
+  "_id": {
+    "$oid": "64f8692ce8433bd01c7522e0"
+  },
+  "mealTypeID": 11,
+  "mealType": "Pepper Soup"
+},{
+  "_id": {
+    "$oid": "64f8706de8433bd01c7522e1"
+  },
+  "mealTypeID": 12,
+  "mealType": "Main Course"
+},{
+  "_id": {
+    "$oid": "64f873c8e8433bd01c7522e2"
+  },
+  "mealTypeID": 13,
+  "mealType": "Nigeria Dish"
+},{
+  "_id": {
+    "$oid": "64f9b7dc5aaaf41487cddbbc"
+  },
+  "mealTypeID": 14,
+  "mealType": "Pasta"
+},{
+  "_id": {
+    "$oid": "64f9b7ea5aaaf41487cddbbd"
+  },
+  "mealTypeID": 15,
+  "mealType": "Pizza"
+},{
+  "_id": {
+    "$oid": "64fadf77bd1bbfc5261f5976"
+  },
+  "mealTypeID": 16,
+  "mealType": "Soups"
+},{
+  "_id": {
+    "$oid": "64fae0f4bd1bbfc5261f5977"
+  },
+  "mealTypeID": 17,
+  "mealType": "Hot Beverages"
+},{
+  "_id": {
+    "$oid": "64fc60ec5da9791d1b532250"
+  },
+  "mealTypeID": 18,
+  "mealType": "Drinks"
+},{
+  "_id": {
+    "$oid": "64fc63775da9791d1b532264"
+  },
+  "mealTypeID": 19,
+  "mealType": "Drinks2"
+},{
+  "_id": {
+    "$oid": "64fc67315da9791d1b53227c"
+  },
+  "mealTypeID": 20,
+  "mealType": "Drinks3"
+}]

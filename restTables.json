@@ -1,14 +1,37 @@
 [{
   "_id": "1",
   "tableNum": "1",
-  "selected": [],
-  "billCost": "",
+  "selected": [
+    {
+      "id": "64fc5b475da9791d1b532238",
+      "meal": "Boiled Potatoe",
+      "mealPrice": "1000",
+      "qty": 1,
+      "tranID": 5890
+    },
+    {
+      "id": "64fc5b295da9791d1b532237",
+      "meal": "Yam Balls",
+      "mealPrice": "1500",
+      "qty": 1,
+      "tranID": 8864
+    }
+  ],
+  "billCost": 2500,
   "user": ""
 },{
   "_id": "2",
   "tableNum": "2",
-  "selected": [],
-  "billCost": "",
+  "selected": [
+    {
+      "id": "64fc5b295da9791d1b532237",
+      "meal": "Yam Balls",
+      "mealPrice": "1500",
+      "qty": 1,
+      "tranID": 8333
+    }
+  ],
+  "billCost": 1500,
   "user": ""
 },{
   "_id": "3",

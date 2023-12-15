@@ -1,0 +1,20 @@
+[
+  {
+    "mealTypeID": 1,
+  "mealType": "Gentle Men"
+  },
+
+  {
+    "mealTypeID": 2,
+    "mealType": "Ladies"
+  },
+
+  {
+    "mealTypeID": 3,
+    "mealType": "Children"
+  }
+
+
+
+
+]

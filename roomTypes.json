@@ -1,7 +1,27 @@
-[
-    {
-        "typeID":"5000",
-        "roomType":"Add New"
-
-    }
-]
+[{
+  "_id": {
+    "$oid": "63dbae9830e6461de0bbc97f"
+  },
+  "typeID": "5000",
+  "roomType": "Add New"
+},{
+  "_id": "686",
+  "typeID": "5002",
+  "roomType": "Classic Room"
+},{
+  "_id": "3019",
+  "typeID": "5003",
+  "roomType": "Deluxe"
+},{
+  "_id": "7971",
+  "typeID": "5005",
+  "roomType": "Superior"
+},{
+  "_id": "4624",
+  "typeID": "5006",
+  "roomType": "Diplomatic Suite"
+},{
+  "_id": "7306",
+  "typeID": "5007",
+  "roomType": "Executive Suite"
+}]

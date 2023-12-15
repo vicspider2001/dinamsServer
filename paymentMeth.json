@@ -1,23 +1,31 @@
-[
-    {
-        "id":"1",
-        "method":"Cash"
-    },
-    {
-        "id":"2",
-        "method":"POS"
-    },
-    {
-        "id":"3",
-        "method":"Transfer"
-    },
-    {
-        "id":"4",
-        "method":"Complimentary"
-    },
-    {
-        "id":"4",
-        "method":"Credit"
-    }
-    
-]
+[{
+  "_id": {
+    "$oid": "63dbae4030e6461de0bbc976"
+  },
+  "id": "1",
+  "method": "Cash"
+},{
+  "_id": {
+    "$oid": "63dbae4030e6461de0bbc977"
+  },
+  "id": "2",
+  "method": "POS"
+},{
+  "_id": {
+    "$oid": "63dbae4030e6461de0bbc978"
+  },
+  "id": "3",
+  "method": "Transfer"
+},{
+  "_id": {
+    "$oid": "63dbae4030e6461de0bbc979"
+  },
+  "id": "4",
+  "method": "Complimentary"
+},{
+  "_id": {
+    "$oid": "63dbae4030e6461de0bbc97a"
+  },
+  "id": "4",
+  "method": "Credit"
+}]

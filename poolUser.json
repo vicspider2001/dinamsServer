@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "63dd1093d19cd71f383ef0f3"
+  },
+  "name": "Victor A",
+  "username": "victor",
+  "password": "1977"
+},{
+  "_id": {
+    "$oid": "64f1dc7ff13187f2242d7ce6"
+  },
+  "refID": "33179",
+  "name": "KOLA",
+  "username": "KOLA",
+  "password": "1005",
+  "department": "PoolBar"
+},{
+  "_id": {
+    "$oid": "65153ba71485c765e116afef"
+  },
+  "refID": "444119",
+  "name": "Apeisende Dorathy",
+  "username": "Apeisende",
+  "password": "2222",
+  "department": "PoolBar"
+},{
+  "_id": {
+    "$oid": "6517fd47342fba35c62f8563"
+  },
+  "refID": "484507",
+  "name": "Akuso",
+  "username": "Akuso",
+  "password": "3279",
+  "department": "PoolBar"
+}]

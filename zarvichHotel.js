@@ -1,5 +1,9 @@
 var express = require('express');
+const https = require("https");
+const path = require("path");
+const fs = require("fs");
 var zarvich = express();
+const db2 = require('./db2');
 var dotenv = require('dotenv');
 var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient;
@@ -11,12 +15,14 @@ const bodyparser = require('body-parser');
 const res = require('express/lib/response');
 var port = process.env.PORT || 80;
 var db;
+const AuthController = require('./auth/authController');
 
 
 zarvich.use(bodyparser.urlencoded({extended:true}));
 zarvich.use(bodyparser.json());
 zarvich.use(cors());
 zarvich.use(express());
+zarvich.use('/api/auth', AuthController)
 
 zarvich.get('/',(re,res)=>{
     res.send("This is root page")
@@ -98,6 +104,15 @@ zarvich.delete('/delRoom/:id',(req,res)=>{
     var id = req.params.id
     db.collection('hoteldata').deleteOne(
         {roomNumbers:id},(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+zarvich.delete('/resvntdel/:id',(req,res)=>{
+    var id = req.params.id
+    db.collection('reservationData').deleteOne(
+        {resID:id},(err,result)=>{
         if(err) throw err;
         res.send(result)
     })
@@ -300,6 +315,26 @@ zarvich.post('/bookNow',(req,res)=>{
 	})
 })
 
+// Post Card Details
+zarvich.post('/prntCard',(req,res)=>{
+	console.log(req.body);
+	db.collection('cardDetails').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
+// Post Card Details
+zarvich.post('/prntCardError',(req,res)=>{
+	console.log(req.body);
+	db.collection('cardErrorLog').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
+
+
 zarvich.post('/postOccuppancy',(req,res)=>{
 	console.log(req.body);
 	db.collection('checkinWarehouse').insertOne(req.body,(err,result)=>{
@@ -346,6 +381,25 @@ zarvich.delete('/delBooking/:id',(req,res)=>{
         res.send(result)
     })
 })
+
+
+//delete card details
+zarvich.delete('/delCard',(req,res)=>{
+    db.collection('cardDetails').remove({},(err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//delete cardErrors
+zarvich.delete('/delError',(req,res)=>{
+    db.collection('cardErrorLog').remove({},(err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
 
 //delete from firstNite data
 zarvich.delete('/delFirstNite/:id',(req,res)=>{
@@ -638,6 +692,30 @@ zarvich.put('/roomnum/:id',(req,res)=>{
 //return all website reservations
 zarvich.get('/ebooking', (req,res) => {
     db.collection('reservations').find().toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//return all card locks
+zarvich.get('/getCards', (req,res) => {
+    db.collection('cardDetails').find().toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//return all card Errors
+zarvich.get('/getCardErrors', (req,res) => {
+    db.collection('cardErrorLog').find().toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//return all cardErrors locks
+zarvich.get('/getCardError', (req,res) => {
+    db.collection('cardErrorLog').find().toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
@@ -1288,6 +1366,31 @@ zarvich.get('/menuitems', (req,res)=> {
     })
 })
 
+
+
+//return all laundryitems
+zarvich.get('/laundryitems', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+//return menuitems wrt clothtypes
+    else if(req.query.clothtypes){
+        var clothtypes = (req.query.clothtypes)
+        query={mealTypeID:Number(clothtypes)}
+    }
+//return menuitems wrt categories
+    else if(req.query.category){
+        var category = (req.query.category)
+        query={categoryID:Number(req.query.category)}
+    }
+    db.collection('LaundryMenu').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 zarvich.delete('/restaurantMenus/:id',(req,resp)=>{
     console.log(req.params.id);
     db.collection('restaurantMenu').deleteOne(
@@ -1421,6 +1524,31 @@ zarvich.get('/menuCategories', (req,res)=> {
     })
 })
 
+
+//return all laundryCategories
+zarvich.get('/laundryCategories', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={mealTypeID:(req.query.id)}
+    }
+//return menucategories wrt LaundryMenu
+    else if(req.query.LaundryMenu){
+        var LaundryMenu = (req.query.LaundryMenu)
+        query={mealTypeID:Number(req.query.LaundryMenu)}
+    }
+
+    else if(req.query.LaundryfindID){
+        var LaundryfindID = (req.query.LaundryfindID)
+        query={'mealType':(LaundryfindID)}
+    }
+
+    db.collection('ClothesCategories').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 zarvich.post('/postRestMenu',(req,res)=>{
 	console.log(req.body);
 	db.collection('restaurantMenu').insertOne(req.body,(err,result)=>{
@@ -1492,6 +1620,14 @@ zarvich.post('/restaurant',(req,res)=>{
 	})
 })
 
+zarvich.post('/Laundry',(req,res)=>{
+	console.log(req.body);
+	db.collection('laundryData').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
 // Perform Restaurant Credits Postings
 zarvich.post('/restCredit',(req,res)=>{
 	console.log(req.body);
@@ -1500,6 +1636,17 @@ zarvich.post('/restCredit',(req,res)=>{
 		res.send("Check in Complete")
 	})
 })
+
+
+// Perform Laundry Credits Postings
+zarvich.post('/laundryCredit',(req,res)=>{
+	console.log(req.body);
+	db.collection('laundryCredit').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
 
 // Perform Bar Credits Postings
 zarvich.post('/barCredit',(req,res)=>{
@@ -1546,6 +1693,27 @@ else if(req.query.Rstaff){
     })
 })
 
+
+// return Restaurant Postings
+zarvich.get('/alllaundrySales', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all Restaurants wrt user
+else if(req.query.Lstaff){
+    var Lstaff = (req.query.Lstaff)
+    query={user:(Lstaff)}
+}
+    
+
+    db.collection('laundryData').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 // return Restaurant Credits Postings
 zarvich.get('/restaurantCredit', (req,res)=> {
     var query = {};
@@ -1561,6 +1729,27 @@ else if(req.query.RCstaff){
     
 
     db.collection('restaurantCredit').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+// return Restaurant Credits Postings
+zarvich.get('/laundryCredit', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all Restaurants Credits wrt user
+else if(req.query.LCstaff){
+    var LCstaff = (req.query.LCstaff)
+    query={user:(LCstaff)}
+}
+    
+
+    db.collection('laundryCredit').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
@@ -1724,6 +1913,29 @@ else if(req.query.tableID){
     })
 })
 
+zarvich.get('/poolbarWaitersTable', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all Bar Tables ID 
+else if(req.query.waitersName){
+    var waitersName = (req.query.waitersName)
+    query={waiter:(waitersName)}
+}
+
+else if(req.query.waiterTabID){
+    var waiterTabID = (req.query.waiterTabID)
+    query={_id: Number(waiterTabID)}
+}
+
+    db.collection('waitersSalesData').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 // return PoolBar Tables
 zarvich.get('/getclubTables', (req,res)=> {
     var query = {};
@@ -1738,6 +1950,26 @@ else if(req.query.tableID){
 }
 
     db.collection('clubTables').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+//return laundry Tables
+zarvich.get('/getLaundryTables', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all Bar Tables ID 
+else if(req.query.tableID){
+    var tableID = (req.query.tableID)
+    query={tableNum:(tableID)}
+}
+
+    db.collection('laundryTables').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
@@ -1857,6 +2089,47 @@ else if(req.query.resttableID){
     })
 })
 
+
+
+// return Restaurant Tables
+zarvich.get('/LDTable', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all rest Tables ID 
+else if(req.query.LDtableID){
+    var LDtableID = (req.query.LDtableID)
+    query={tableNum:(LDtableID)}
+}
+
+    db.collection('laundryTables').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+// return Restaurant Tables
+zarvich.get('/laundTable', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+// return all rest Tables ID 
+else if(req.query.laundtableID){
+    var laundtableID = (req.query.laundtableID)
+    query={tableNum:(laundtableID)}
+}
+
+    db.collection('laundryTables').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 ////////////////////////////////
 
 // post into PoolBar Tables
@@ -1903,6 +2176,30 @@ zarvich.put('/clubTablePost/:id',(req,res)=>{
 
 })
 
+
+
+// post into club Tables
+zarvich.put('/laundryTablePost/:id',(req,res)=>{
+	console.log(req.params.id);
+    var id = (req.params.id)
+	db.collection('laundryTables').update(
+        {"_id":id},
+        {
+            $set: {
+                    selected:req.body.selected,
+                    billCost:req.body.billCost,
+                    tableNum:req.body.tableNum,
+                    user:req.body.user
+
+                    
+            }
+        },
+        
+    )
+		res.send("Check in Complete")
+
+})
+
 ///////////////////////////////
 
 // put into Bar Tables
@@ -1930,6 +2227,28 @@ zarvich.put('/restaurantTablePost/:id',(req,res)=>{
 	console.log(req.params.id);
     var id = (req.params.id)
 	db.collection('restTables').update(
+        {"_id":id},
+        {
+            $set: {
+                    selected:req.body.selected,
+                    billCost:req.body.billCost,
+                    tableNum:req.body.tableNum,
+
+                    
+            }
+        },
+        
+    )
+		res.send("Check in Complete")
+
+})
+
+
+//post into Restaurant Tables
+zarvich.put('/laundryTablePost/:id',(req,res)=>{
+	console.log(req.params.id);
+    var id = (req.params.id)
+	db.collection('laundryTables').update(
         {"_id":id},
         {
             $set: {
@@ -2955,6 +3274,74 @@ zarvich.post('/ClubUsers',(req,res)=>{
 	})
 })
 
+zarvich.post('/poolWaiterslist',(req,res)=>{
+	console.log(req.body);
+	db.collection('poolWaiters').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
+zarvich.post('/splitPayments',(req,res)=>{
+	console.log(req.body);
+	db.collection('poolSplitPayment').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
+zarvich.post('/postWaitersSales',(req,res)=>{
+	console.log(req.body);
+	db.collection('waitersSalesData').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
+//get poolBarTemp data
+zarvich.get('/poolWaitersData', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    db.collection('poolWaiters').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+zarvich.get('/poolWaitersCost', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    else if(req.query.TotwaiterTabID){
+        var TotwaiterTabID = (req.query.TotwaiterTabID)
+        query={waiter: (TotwaiterTabID)}
+    }
+
+    db.collection('waitersSalesData').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//delete from admin User
+zarvich.delete('/poolwaitersSD/:id',(req,res)=>{
+    var id = req.params.id
+    db.collection('waitersSalesData').deleteOne(
+        {_id:Number(id)},(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+
 //get poolbar User
 zarvich.get('/poolUserInfo', (req,res)=> {
     var query = {};
@@ -3223,6 +3610,37 @@ zarvich.get('/restUserInfo', (req,res)=> {
     
     
     db.collection('restUser').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//get restaurant User
+zarvich.get('/laundryUserInfo', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+//return restaurant username
+    else if(req.query.launduserName){
+        var launduserName = (req.query.launduserName)
+        query={'username':(launduserName)}
+    }
+//return restaurant password
+    else if(req.query.laundcode){
+        var laundcode = (req.query.laundcode)
+        query={'password':(laundcode)}
+    }
+
+    else if(req.query.laundrefcode){
+        var laundrefcode = (req.query.laundrefcode)
+        query={refID:(laundrefcode)}
+    }
+    
+    
+    db.collection('laundryUser').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
@@ -3592,7 +4010,56 @@ zarvich.get('/GetTmpRmDep', (req,res)=> {
     })
 })
 
-//delete from TempRmPost
+
+zarvich.delete('/delWaiters',(req,res)=>{
+    db.collection('poolWaiters').remove({},(err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+    
+})
+
+zarvich.delete('/delWaitersSales',(req,res)=>{
+    db.collection('waitersSalesData').remove({},(err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+    
+})
+
+zarvich.delete('/delsplitpay',(req,res)=>{
+    db.collection('poolSplitPayment').remove({},(err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+    
+})
+
+zarvich.get('/getWaiters', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    db.collection('poolWaiters').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+zarvich.get('/getSplits', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    db.collection('poolSplitPayment').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
 
 zarvich.delete('/delTmpRmDep',(req,res)=>{
     db.collection('TempRoomDeposit').remove({},(err,result) => {
@@ -3785,6 +4252,15 @@ zarvich.post('/retireRest',(req,res)=>{
 		res.send("Restaurant Sales Retired")
 	})
 })
+
+// Add sales to laundrywarehouse
+zarvich.post('/retireLaundry',(req,res)=>{
+	console.log(req.body);
+	db.collection('laundrySales').insert(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Restaurant Sales Retired")
+	})
+})
 ///////////////////////////////
 //get restaurant sales data
 zarvich.get('/findrestaurantsalesNow', (req,res)=> {
@@ -3864,6 +4340,15 @@ zarvich.delete('/delRest/:id',(req,res)=>{
     })
 })
 
+
+zarvich.delete('/delLaund/:id',(req,res)=>{
+    var id = req.params.id
+    db.collection('laundryData').deleteMany(
+        {user:id},(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
 ////////////////////////////
 // Add to dailySales
 zarvich.post('/add',(req,res)=>{
@@ -4139,6 +4624,25 @@ zarvich.get('/getDailyOccuppancy', (req,res)=> {
     }
 
     db.collection('checkinWarehouse').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+
+})
+
+zarvich.get('/getReservationBydate', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    else if(req.query.selectDate){
+       var selectDate = (req.query.selectDate)
+        query={'start3':(selectDate)}
+    }
+
+    db.collection('reservationData').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
@@ -5091,6 +5595,33 @@ zarvich.get('/getRestSalesQty', (req,res)=> {
 })
 
 
+//get stock from BarStore
+zarvich.get('/getLaundrySalesQty', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+
+    else if(req.query.prodNmeL){
+        var prodNmeL = (req.query.prodNmeL)
+        query={'productName':(req.query.prodNmeL)}
+    }   
+
+    else if(req.query.useDateL&&req.query.useshiftL&&req.query.userstaffL){
+        var useDateL = (req.query.useDateL)
+        var useshiftL = (req.query.useshiftL)
+        var userstaffL = (req.query.userstaffL)
+        query = {'tranDate':(useDateL), 'shift':(useshiftL), 'user':(userstaffL)}
+    }
+    
+    db.collection('LaundrySalesQty').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
 
 //get stock from PoolBarStore
 zarvich.get('/getPoolBarSalesQty', (req,res)=> {
@@ -5185,6 +5716,26 @@ zarvich.get('/getRestBarStore', (req,res)=> {
     }
     
     db.collection('RestBarStore').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+//get stock from RestBarStore
+zarvich.get('/getLaundryStore', (req,res)=> {
+    var query = {};
+    console.log(req.query.id)
+    if(req.query.id){
+        query={_id:(req.query.id)}
+    }
+    
+    else if(req.query.prodNmeLaundry){
+        var prodNmeLaundry = (req.query.prodNmeLaundry)
+        query={'productName':(req.query.prodNmeLaundry)}
+    }
+    
+    db.collection('LaundryStore').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })

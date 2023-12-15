@@ -1,56 +1,61 @@
-[
-    {
-        "mealTypeID":1,
-        "mealType":"Cream"
-    },
-    
-    {
-        "mealTypeID":2,
-        "mealType":"Energy Drinks"
-        
-    },
-    
-    {
-       
-        "mealTypeID":3,
-        "mealType":"Beer"
-       
-    },
-    
-    {
-        "mealTypeID":4,
-        "mealType":"Apparetive"
-        
-    },
-    
-
-    {
-        "mealTypeID":5,
-        "mealType":"Champagne"
-    },
-
-   
-    {
-        "mealTypeID":6,
-        "mealType":"Wine"
-        
-    },
-    {
-        "mealTypeID":7,
-        "mealType":"Spirit"
-        
-    },
-    {
-        "mealTypeID":8,
-        "mealType":"Juice"
-        
-    },
-
-    {
-        "mealTypeID":9,
-        "mealType":"Cognac"
-        
-    }
-    
-
-]
+[{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba4"
+  },
+  "mealTypeID": 1,
+  "mealType": "Cream"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba5"
+  },
+  "mealTypeID": 2,
+  "mealType": "Energy Drinks"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba6"
+  },
+  "mealTypeID": 3,
+  "mealType": "Beer"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba7"
+  },
+  "mealTypeID": 4,
+  "mealType": "Apparetive"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba8"
+  },
+  "mealTypeID": 5,
+  "mealType": "Champagne"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413eba9"
+  },
+  "mealTypeID": 6,
+  "mealType": "Wine"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413ebaa"
+  },
+  "mealTypeID": 7,
+  "mealType": "Spirit"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413ebab"
+  },
+  "mealTypeID": 8,
+  "mealType": "Juice"
+},{
+  "_id": {
+    "$oid": "650da37ab86ee38ad413ebac"
+  },
+  "mealTypeID": 9,
+  "mealType": "Cognac"
+},{
+  "_id": {
+    "$oid": "650da6c2b86ee38ad413ebb0"
+  },
+  "mealTypeID": 10,
+  "mealType": "Soft Drinks"
+}]

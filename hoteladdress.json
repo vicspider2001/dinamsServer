@@ -1,8 +1,8 @@
-[
-    {
-        
-        "HotelName":"Dinam Hotels & Suites",
-        "Address":"Kaduna, Nigeria",
-        "Phone":"+234-call-us-Now"
-    }
-]
+[{
+  "_id": {
+    "$oid": "63dbadaa30e6461de0bbc93a"
+  },
+  "HotelName": "Grand Seasons Hotel",
+  "Address": "Nnewi Anambra, Nigeria",
+  "Phone": "+2348022888776, +2348130002452"
+}]

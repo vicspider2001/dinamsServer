@@ -1,0 +1,46 @@
+[
+  
+  {
+    "_id": "1",
+    "mealTypeID": 1,
+    "mealName": "Suit 2Pcs",
+    "mealPrice": "1500",
+    "mealQt": 1,
+    "mealType": "Gentle Men",
+    "categoryID": 1,
+    "category": ""
+  },
+
+  {
+    "_id": "2",
+    "mealTypeID": 2,
+    "mealName": "Suit 2Pcs",
+    "mealPrice": "1000",
+    "mealQt": 1,
+    "mealType": "Ladies",
+    "categoryID": 2,
+    "category": ""
+  },
+
+  { 
+   "_id": "1",
+   "mealTypeID": 1,
+   "mealName": "Jacket",
+   "mealPrice": "1000",
+   "mealQt": 1,
+   "mealType": "Gentle Men",
+   "categoryID": 1,
+   "category": ""
+},
+
+{ 
+  "_id": "2",
+   "mealTypeID": 2,
+   "mealName": "Evening Dress",
+   "mealPrice": "500",
+   "mealQt": 1,
+   "mealType": "Ladies",
+   "categoryID": 2,
+   "category": ""
+}]
+

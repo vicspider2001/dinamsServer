@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "63da9b587ed21bca47411d19"
+  },
+  "name": "Victor A",
+  "username": "victor",
+  "password": "1977"
+},{
+  "_id": {
+    "$oid": "64f1dc7ff13187f2242d7ce8"
+  },
+  "refID": "33179",
+  "name": "KOLA",
+  "username": "KOLA",
+  "password": "1005",
+  "department": "Store"
+},{
+  "_id": {
+    "$oid": "6525075a8ff16cb111aa5d11"
+  },
+  "refID": "458405",
+  "name": "Mr Shola",
+  "username": "Mr Shola",
+  "password": "5555",
+  "department": "Store"
+}]

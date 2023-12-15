@@ -1,15 +1,19 @@
-[
-    {
-        "id":"1",
-        "method":"Initial Deposit"
-    },
-    {
-        "id":"2",
-        "method":"Additional Deposit"
-    },
-    {
-        "id":"3",
-        "method":"Bill Settlement"
-    }
-    
-]
+[{
+  "_id": {
+    "$oid": "63dbacb830e6461de0bbc92a"
+  },
+  "id": "1",
+  "method": "Initial Deposit"
+},{
+  "_id": {
+    "$oid": "63dbacb830e6461de0bbc92b"
+  },
+  "id": "2",
+  "method": "Additional Deposit"
+},{
+  "_id": {
+    "$oid": "63dbacb830e6461de0bbc92c"
+  },
+  "id": "3",
+  "method": "Bill Settlement"
+}]
